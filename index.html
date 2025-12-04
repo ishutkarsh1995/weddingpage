@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Venue & Raipur To do </title>
+
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fafafa;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .slideshow {
+        height: 55vh; /* Reduce height on tablets/mobiles */
+    }
+
+    .slideshow h1 {
+        font-size: 1.9rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .info-box img {
+        max-width: 100% !important;
+        height: auto !important; /* Prevent cropping */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-box h3 {
+        font-size: 1.2rem;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .slideshow {
+        height: 45vh; /* Even smaller for small phones */
+    }
+
+    .slideshow h1 {
+        font-size: 1.6rem;
+    }
+
+    .info-box {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        margin-top: 12px;
+    }
+
+    .container {
+        width: 96%;
+    }
+}
+
+
+    header h1 {
+        font-size: 2.6rem;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    /* Slideshow container */
+.slideshow {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* Individual slides */
+.slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slideAnimation 25s infinite;
+}
+
+/* Timing for each slide */
+.slideshow .slide:nth-child(1) { animation-delay: 0s; }
+.slideshow .slide:nth-child(2) { animation-delay: 5s; }
+.slideshow .slide:nth-child(3) { animation-delay: 10s; }
+.slideshow .slide:nth-child(4) { animation-delay: 15s; }
+.slideshow .slide:nth-child(5) { animation-delay: 20s; }
+
+/* Smooth fade animation */
+@keyframes slideAnimation {
+    0% { opacity: 0; }
+    8% { opacity: 1; }
+    20% { opacity: 1; }
+    28% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Dark gradient overlay */
+.slideshow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.45)
+    );
+    z-index: 5;
+}
+
+/* Title styling preserved */
+.slideshow h1 {
+    position: relative;
+    z-index: 10;
+    font-size: 2.6rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+    .container {
+        width: 92%;
+        max-width: 1100px;
+        margin: 20px auto;
+    }
+
+.align-right {
+    text-align: right;
+}
+
+.align-right img {
+    margin-left: auto;
+}
+
+
+    h2 {
+        font-size: 1.8rem;
+        margin-top: 40px;
+        color: #222;
+        border-left: 5px solid #3478f6;
+        padding-left: 10px;
+    }
+
+    .map-container {
+        margin: 20px 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .info-box {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .info-box h3 {
+        margin-top: 0;
+        font-size: 1.4rem;
+        color: #444;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 18px;
+        background: #3478f6;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .btn:hover {
+        background: #1f63da;
+    }
+</style>
+
+</head>
+<body>
+
+<header class="slideshow">
+    <div class="slide" style="background-image: url('https://image.wedmegood.com/resized/720X/uploads/member/1285420/1591611202_4.png');"></div>
+    <div class="slide" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwaiypCZG5NEzYt7TJqMVqITXcWZYEuO31D8kjwHeQZxnn3FX9W8ALmQXGDxTxF3FuRWrF4amTDwxXk80skGpSqV-TYs0PPM5UdCaqoUxY9UB1m2XkEfvuU5fNlBHSwduiQEaBB=s680-w680-h510-rw'); background-size: contain;"></div>
+  <div class="slide" style="background-image: url('https://files.yappe.in/place/full/bhansali-marriage-palace-8536224.webp');"></div> 
+    <div class="slide" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AG0ilSx_nwV6Ot_SHxgilQdCXmIaB764Kgry0LdzvbYUA8_S7sjuYwxtIr1_xw4mz4aFsj8kk1Dga-Fjdpaqjm0hBfZNr-gXs4em-Y_x_txylJaH2Pl9LZxfsefrAfOr0v9Xq5wzVbbhNA=s680-w680-h510-rw'); background-size: contain;
+            "></div>
+    <div class="slide" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwF1nV1SAsonxlKiYCeYZ-EU79Cdgv3xNlMwSSeg410UFFdJOGNKbkiTinfGidT_0GOBWelzx0FPTK712QxeKcD8MwqEXR90Fa8nHEwD-fr8_UcJI_BvbiF2tSg1OKDLaBtI4LY=s680-w680-h510-rw');"></div>
+
+    <h1>Bhansali Marriage Palace</h1>
+</header>
+
+
+<div class="container">
+
+    <!-- Google Map Embed -->
+    <h2>Venue Location</h2>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.3565028525636!2d81.55681277590725!3d21.25735137988678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dfae5f1ba621%3A0x493d7ceeec348597!2sBhansali%20Marriage%20Palace!5e0!3m2!1sen!2sin!4v1764820965831!5m2!1sen!2sin" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
+    </div>
+
+    <!-- How to Reach Section -->
+    <h2>How to Reach the Venue</h2>
+
+    <!-- By Road -->
+    <div class="info-box">
+        <h3>🚗 By Road</h3>
+        <p>
+            The venue is located on the <strong>Raipur–Bhilai Highway (NH 53)</strong>.
+            It is well connected via local taxis, autos, and cab services like Uber/Ola (if available).
+        </p>
+        <p><strong>Nearest Major Bus Stand 1:</strong> Raipur Old Bus Stand (Pandri Bus Station)</p>
+        <p><strong>Nearest Major Bus Stand 2:</strong> Raipur New Bus Stand (Bhatagaon Bus Station)</p>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Raipur+Pandri+Bus+Stand,+Raipur&destination=Bhansali+Marriage+Palace" target="_blank">
+            Route From Old Bus Stand   </a>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Bhatagaon+Bus+Stand,+Raipur&destination=Bhansali+Marriage+Palace" target="_blank">
+            Route From New Bus Stand   </a>
+          
+        <p><strong>Nearest Bus Stop Point:</strong> Tatibandh Chowk</p>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Tatibandh+Chowk,+Raipur&destination=Bhansali+Marriage+Palace" target="_blank">
+            Route From Tatibandh Chowk</a> </div>
+        
+    <!-- By Train -->
+    <div class="info-box">
+        <h3>🚆 By Train</h3>
+        <p>
+            The nearest major railway station is 
+<strong>
+    <a href="https://www.google.com/search?q=Raipur+Junction" target="_blank" style="color:#3478f6; text-decoration:none;">
+        Raipur Junction (R)
+    </a>
+</strong>.
+            From there, you may book a taxi/auto to reach the Marriage Palace (approx. fair 300/-).
+        </p>
+        <a class="btn" 
+           href="https://www.google.com/maps/dir/?api=1&origin=Raipur+Junction&destination=Bhansali+Marriage+Palace" 
+           target="_blank">
+           Route From Raipur Junction
+        </a>
+    </div>
+
+    <!-- By Air -->
+    <div class="info-box">
+        <h3>✈️ By Flight</h3>
+        <p>
+            The nearest airport is 
+<strong>
+    <a href="https://www.google.com/search?q=Swami+Vivekananda+Airport+Raipur" target="_blank" style="color:#3478f6; text-decoration:none;">
+        Swami Vivekananda Airport, Raipur
+    </a>
+</strong>.
+            Regular taxis and app-based cabs are available for direct travel to the venue (approx. fair 600/-).
+        </p>
+        <a class="btn" 
+           href="https://www.google.com/maps/dir/?api=1&origin=Swami+Vivekananda+Airport+Raipur&destination=Bhansali+Marriage+Palace" 
+           target="_blank">
+           Route From Airport
+        </a>
+    </div>
+
+</div>
+
+<div class="container">
+    <h2>Places to Visit Around Raipur</h2>
+
+<!-- Tourism Card 8 -->
+    <div class="info-box">
+        <h3 style="color: #1e549f;">Marine Drive, Raipur (Telibandha Lake)</h3>
+        <img src="https://i.ytimg.com/vi/w2hvXAAQGPc/maxresdefault.jpg" alt="Bhilai Steel Plant" style="width:100%; max-width:390px; height:280px; border-radius:10px; margin-bottom:15px;">
+        <img src="https://i.pinimg.com/474x/48/6f/43/486f433ffe0322aebfe0feada8b19da9.jpg" alt="Bhilai Steel Plant" style="width:100%; height:280px; max-width:390px; border-radius:10px; margin-bottom:15px;">
+        <p style="color:#555;">
+            A modern riverfront-style walkway around Telibandha Lake, 
+            famous for its vibrant night lighting, food stalls, cycling tracks, 
+            and the iconic Peace Statue. One of Raipur’s most lively hangout spots.
+        </p>
+    </div>
+
+   <!-- Tourism Card 9 -->
+    <div class="info-box">
+        <h3 style="color: #1e549f;">Buddha Talab (Vivekananda Sarovar)</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Swami_Vivekanand_Sarovar_%28Budha_Talab%29%2C_Raipur.jpg" alt="Bhilai Steel Plant" style="width:100%; max-width:390px; height:280px; border-radius:10px; margin-bottom:15px;">
+        <img src="https://i.ytimg.com/vi/Kn4mWXyQYJw/sddefault.jpg" alt="Bhilai Steel Plant" style="width:100%; height:280px; max-width:390px; border-radius:10px; margin-bottom:15px;">
+        <p style="color:#555%;">
+            Located near the heart of Raipur, this lake features a massive Vivekananda statue, 
+            boating, illuminated pathways, and peaceful gardens. 
+            It is a perfect spot for evening walks and photography.
+        </p>
+    </div>
+
+   <!-- Tourism Card 4  -->
+    <div class="info-box">
+        <h3 style="color: #1e549f;">Mayfair Lake Resort, Raipur</h3>
+        <img src="https://image.wedmegood.com/resized/720X/uploads/member/991265/1737610969_Raipur_Photo_ariel_copy.jpg" alt="Bhilai Steel Plant" style="width:100%; max-width:390px; height:280px; border-radius:10px; margin-bottom:15px;">
+        <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202208/download-166191468028014473186-1200x2168.jpg?.MgdAHHMC6MbXeOzkZSt0GtB2GUBnIux?size=750:*" alt="Bhilai Steel Plant" style="width:100%; height:280px; max-width:390px; border-radius:10px; margin-bottom:15px;">
+        <p style="color:#555;">
+            One of Raipur’s most luxurious properties, Mayfair Lake Resort is located in Naya Raipur beside a scenic lake. 
+            Known for its serene ambience, premium rooms, spa facilities, restaurants, and landscaped gardens, it is a perfect 
+            destination for relaxation, fine dining, or pre-wedding photography. The resort is about 25 km from Raipur city.
+        </p>
+    </div>
+
+
+    <!-- Tourism Card 1 -->
+    <div class="info-box">
+        <h3 style="color: #1e549f;">Bhilai Steel Plant</h3>
+        <img src="https://etimg.etb2bimg.com/photo/66179401.cms" alt="Bhilai Steel Plant" style="width:100%; max-width:390px; height:280px; border-radius:10px; margin-bottom:15px;">
+        <img src="https://www.hindustantimes.com/ht-img/img/2024/07/01/1600x900/The-carbon-monoxide-leak-started-when-the-nine-wor_1719833111233.jpg" alt="Bhilai Steel Plant" style="width:100%; height:280px; max-width:390px; border-radius:10px; margin-bottom:15px;">
+        <p style="color:#555;">
+            Located about 10 km from Bhilai, the Bhilai Steel Plant stands as a testament to India’s industrial excellence. 
+            Visitors can witness advanced steel-making processes, explore a well-designed township, and enjoy the green surroundings 
+            that beautifully blend nature with engineering marvels.
+        </p>
+    </div>
+
+
+
+     <!-- Tourism Card 7 -->
+    <div class="info-box">
+        <h3 style="color: #1e549f;">Nandanvan Jungle Safari</h3>
+        <img src="https://junglesafari.cg.nic.in/mt-demo/56000/56050/mt-content/uploads/2015/12/Monument-bg.jpg" alt="Bhilai Steel Plant" style="width:100%; max-width:390px; height:280px; border-radius:10px; margin-bottom:15px;">
+        <img src="https://junglesafari.cg.nic.in/mt-demo/56000/56050/mt-content/uploads/2015/12/Tiger-bg.jpg" alt="Bhilai Steel Plant" style="width:100%; height:280px; max-width:390px; border-radius:10px; margin-bottom:15px;">
+        <p style="color:#555;">
+            One of India's largest man-made safari parks, located in Naya Raipur. 
+            Visitors can explore tiger safari, lion safari, herbivore zones, aviary, and reptile houses. 
+            A perfect family outing spot just 30 km from Raipur city.
+        </p>
+    </div>
+
+
+    <!-- Tourism Card 2 -->
+    <div class="info-box">
+        <h3 style="color: #1e549f;">Dongargarh</h3>
+        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/old-maa-bamleshwari-devi-dongargarh-rajnandgaon-chhattisgarh-3-attr-hero?qlt=82&ts=1754895220823" alt="Bhilai Steel Plant" style="width:100%; max-width:390px; height:280px; border-radius:10px; margin-bottom:15px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Arieal_View_from_Maa_Bamleshwari_Devi_Temple_on_a_hilltop.JPG/1200px-Arieal_View_from_Maa_Bamleshwari_Devi_Temple_on_a_hilltop.JPG" style="width:100%; height:280px; max-width:390px; border-radius:10px; margin-bottom:15px;">
+        <p style="color:#555;">
+            A major pilgrimage site located 65 km from Raipur, Dongargarh is famous for the Maa Bamleshwari Temple atop a 1600-foot hill. 
+            A ropeway adds thrill to the experience. The vibrant Navratri fairs here attract thousands of devotees every year.
+        </p>
+    </div>
+
+    <!-- Tourism Card 3 -->
+    <div class="info-box">
+        <h3 style="color: #1e549f;">Gangrel Dam</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/RAVISHANKAR_SAGAR_PROJECT_GANGREL-_2.jpg" alt="Bhilai Steel Plant" style="width:100%; max-width:390px; height:280px; border-radius:10px; margin-bottom:15px;">
+        <img src="https://images.bhaskarassets.com/web2images/521/2023/09/19/dbcl_169512612165099269563a9_19_dmt_20.jpg" alt="Bhilai Steel Plant" style="width:100%; height:280px; max-width:390px; border-radius:10px; margin-bottom:15px;">
+        <p style="color:#555;">
+            Also known as Ravishankar Dam, this scenic water reservoir is perfect for peaceful retreats and water activities. 
+            Located around 70 km from Raipur, it offers serene islands, boating options, and breathtaking monsoon views.
+        </p>
+    </div>
+       
+               <!-- Tourism Card 6 -->
+    <div class="info-box">
+        <h3 style="color: #1e549f;">Ghatarani Waterfall</h3>
+        <img src="https://tripnetra.com/blog/wp-content/uploads/2018/11/Ghatarani-Waterfalls.jpg" alt="Bhilai Steel Plant" style="width:100%; max-width:390px; height:280px; border-radius:10px; margin-bottom:15px;">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/22/80/96/ghatarani-waterfall.jpg?h=-1&s=1&w=1200" alt="Bhilai Steel Plant" style="width:100%; height:280px; max-width:390px; border-radius:10px; margin-bottom:15px;">
+        <p style="color:#555;">
+            A beautiful forest-surrounded waterfall located around 75 km from Raipur. 
+            Ghatarani is especially popular during monsoons for trekking, nature walks, and photography. 
+            The serene temple near the falls adds to its charm.
+        </p>
+    </div>
+
+      <!-- Tourism Card 5 -->
+    <div class="info-box">
+        <h3 style="color: #1e549f;">Waterfalls Around Raipur</h3>
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/44/c5/49/chitrakoot-falls.jpg?w=900&h=500&s=1" alt="Bhilai Steel Plant" style="width:100%; max-width:390px; height:280px; border-radius:10px; margin-bottom:15px;">
+        <img src="https://content.jdmagicbox.com/comp/durg/b9/9999px788.x788.150107125919.n8b9/catalogue/siyadevi-waterfall-balod-durg-tourist-attraction-upgrqa1s6i.jpg" alt="Bhilai Steel Plant" style="width:100%; height:280px; max-width:390px; border-radius:10px; margin-bottom:15px;">
+        <p style="color:#555;">
+            Raipur is surrounded by beautiful waterfalls such as Chitrakote – the “Niagara of India,” located 300 km away. 
+            Closer options include Ghatarani Waterfall (75 km) and Siyadevi Waterfall (66 km), perfect for nature lovers.
+        </p>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
