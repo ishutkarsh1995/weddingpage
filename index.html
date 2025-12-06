@@ -19,7 +19,7 @@
 @media (max-width: 768px) {
 
     .slideshow {
-        height: 55vh; /* Reduce height on tablets/mobiles */
+        height: 50vh; /* Reduce height on tablets/mobiles */
     }
 
     .slideshow h1 {
@@ -206,9 +206,128 @@
     }
 </style>
 
+<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wedding location & things to do in Raipur</title>
+  <style>
+    /* Page layout */
+    html,body {
+      height: 100%;
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .wrap {
+      min-height: 100%;
+      display: flex;
+      align-items: center;      /* vertical center */
+      justify-content: center;  /* horizontal center */
+      padding: 1rem;
+      box-sizing: border-box;
+      background: #fafafa;
+    }
+
+    /* Heading style */
+    h1.title {
+      margin: 0;
+      padding: 0.4rem 1rem;
+      text-align: center;
+      font-weight: 700;
+      line-height: 1;
+      white-space: nowrap;         /* prevent wrapping */
+      display: inline-block;
+      /* responsive preferred size: will scale with viewport */
+      font-size: clamp(18px, 3.6vw + 0.6vh, 48px);
+      /* prevent accidental overflow visually (will be adjusted by JS below) */
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Optional: subtle visual styling so it looks like a document heading */
+    .title {
+      background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      letter-spacing: 0.2px;
+    }
+
+    /* Extra fallback if layout is extremely narrow */
+    @media (max-width: 300px) {
+      .title { font-size: 14px; }
+    }
+  </style>
+    
 </head>
 <body>
 
+
+<div class="wrap">
+    <h1 id="pageTitle" class="title">Wedding location &amp; things to do in Raipur</h1>
+  </div>
+
+  <script>
+    // JS safeguard: reduces font-size until the heading fits in one line (no horizontal overflow).
+    // This guarantees a single-line heading on *all* device widths.
+    (function ensureSingleLine(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      // start from computed font-size
+      const computed = window.getComputedStyle(el).fontSize;
+      let fontSize = parseFloat(computed);
+
+      // small step to shrink by (in px)
+      const step = Math.max(fontSize * 0.03, 0.5);
+
+      // measure and shrink while the heading's scrollWidth > clientWidth (i.e. would overflow)
+      function fits() {
+        return el.scrollWidth <= el.clientWidth + 0.5; // small tolerance
+      }
+
+      // If the element currently overflows, keep shrinking until it fits or reaches a minimum
+      const minFontSize = 10; // px, don't shrink below this
+      // run after layout (allow the initial clamp/viewport sizing to take effect)
+      requestAnimationFrame(function adjust() {
+        // If it already fits, nothing to do
+        if (fits()) return;
+
+        // Iteratively reduce font-size until it fits or hits minimum
+        // Safety: limit loops to prevent long-running JS
+        let iterations = 0;
+        while (!fits() && fontSize > minFontSize && iterations < 200) {
+          fontSize = Math.max(minFontSize, fontSize - step);
+          el.style.fontSize = fontSize + "px";
+          iterations++;
+        }
+      });
+
+      // Also re-check on window resize (debounced)
+      let to = null;
+      window.addEventListener('resize', function() {
+        if (to) clearTimeout(to);
+        to = setTimeout(function() {
+          // restore to preferred size based on clamp() then re-run adjust
+          el.style.fontSize = '';
+          fontSize = parseFloat(window.getComputedStyle(el).fontSize);
+          requestAnimationFrame(adjust);
+        }, 80);
+      });
+
+      function adjust() {
+        if (fits()) return;
+        let iters = 0;
+        while (!fits() && fontSize > minFontSize && iters < 200) {
+          fontSize = Math.max(minFontSize, fontSize - step);
+          el.style.fontSize = fontSize + "px";
+          iters++;
+        }
+      }
+    })('pageTitle');
+  </script>
+
+    
 <header class="slideshow">
     <div class="slide" style="background-image: url('https://image.wedmegood.com/resized/720X/uploads/member/1285420/1591611202_4.png');"></div>
     <div class="slide" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwaiypCZG5NEzYt7TJqMVqITXcWZYEuO31D8kjwHeQZxnn3FX9W8ALmQXGDxTxF3FuRWrF4amTDwxXk80skGpSqV-TYs0PPM5UdCaqoUxY9UB1m2XkEfvuU5fNlBHSwduiQEaBB=s680-w680-h510-rw'); background-size: contain;"></div>
