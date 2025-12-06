@@ -204,6 +204,37 @@
     .btn:hover {
         background: #1f63da;
     }
+
+ <style>
+.scroll-indicator {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 40px;
+  animation: fadeBlink 1.2s infinite;
+}
+
+.arrow {
+  animation: pulse 1s infinite alternate;
+  margin: 0 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Flash transparency effect */
+@keyframes fadeBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0.35; }
+  100% { opacity: 1; }
+}
+
+/* Arrow pulsing animation */
+@keyframes pulse {
+  0% { transform: translateY(-3px); }
+  100% { transform: translateY(3px); }
+}
+</style>  
 </style>
 
 <meta charset="utf-8" />
@@ -274,7 +305,12 @@
 
 
 <div class="wrap">
-    <h1 id="pageTitle" class="title">Scroll Down for Wedding location &amp; things to do in Raipur</h1>
+    <h2 class="scroll-indicator">
+  <span class="arrow">▼</span>
+  Wedding location &amp; things to do in Raipur
+  <span class="arrow">▼</span>
+</h2>
+
   </div>
 
   <script>
